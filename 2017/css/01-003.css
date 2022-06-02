@@ -9,8 +9,8 @@ html {
 
 .fixed ul {
   display: grid;
-  /* grid-template-columns: ?;
-  gap: ?; */
+  grid-template-columns: repeat(4, 100px);
+  gap: 4px; 
   width: calc(400px + 12px + 4.4rem); 
 }
 
@@ -18,12 +18,16 @@ html {
 /* Ejercicio 2: Distribute las fotos en 5 columnas, y haz que todas ocupen el mismo espacio disponible. Tendrás que utilizar la unidad fr. Separa un poco los elementos entre si */
 .fluid ul {
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
   max-width: 100%; 
 }
 
   /*  Ejercicio 3. Usa auto-fit en combinación con minmax para renderizar tantas imágenes como sean posibles dado el espacio del contenedor. Cada imagen debe ocupar COMO MÍNIMO 120px, y como máximo, una parte proporcional del espacio disponible en el contenedor. Lee este artículo: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ (hasta donde pone "Fill or Fit? What’s the difference?")*/
 .responsive ul {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 5px;
 
 }
 
